@@ -1,8 +1,8 @@
 import os
-from flask import Flask
+from flask import Flask, request
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def main():
-    return 'Hello World!'
+    return app.send_static_file('index.html')
