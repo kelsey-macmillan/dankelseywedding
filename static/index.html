@@ -22,6 +22,11 @@
   <link rel="stylesheet" href="static/css/normalize.css">
   <link rel="stylesheet" href="static/css/skeleton.css">
   <link rel="stylesheet" href="static/css/custom.css">
+      
+  <!-- Javascript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="static/js/rsvp.js"></script>
 
 
   <!-- Favicon
@@ -63,14 +68,11 @@
     <div class="row big-space"></div>
     <div class="row big-padding section">
         <h1>RSVP</h1>
-        <form>
+        <form id="rsvpForm">
             <p>Please enter the name on your invitation.</p>
             <div class="row">
-                <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="first name" id="firstnameInput">
-                </div>
-                <div class="six columns">
-                    <input class="u-full-width" type="text" placeholder="last name" id="lastnameInput">
+                <div class="twelve columns">
+                    <input class="u-full-width" type="text" placeholder="name" id="nameInput">
                 </div>
             </div>
              <input class="button-primary" type="submit" value="Submit">
