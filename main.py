@@ -40,11 +40,14 @@ def rsvp_set(name):
 
     # TO DO ADD NOTE
     if guest['name2'] == None and guest['plus1_allowed']:
-        cur.execute('UPDATE guest SET rsvp1=(%s), plus1_name=(%s) WHERE name1=(%s)',(rsvp1,plus1_name,name,))
+        cur.execute('UPDATE guest SET rsvp1=(%s), plus1_name=(%s), note=(%s) WHERE name1=(%s)',
+                (rsvp1,plus1_name,note,name,))
     elif guest['name2'] == None and not guest['plus1_allowed']:
-        cur.execute('UPDATE guest SET rsvp1=(%s) WHERE name1=(%s)',(rsvp1,name,))  
+        cur.execute('UPDATE guest SET rsvp1=(%s), note=(%s) WHERE name1=(%s)',
+                (rsvp1,note,name,))  
     else:
-        cur.execute('UPDATE guest SET rsvp1=(%s), rsvp2=(%s) WHERE name1=(%s) OR name2=(%s)', (rsvp1,rsvp2,name,name,))
+        cur.execute('UPDATE guest SET rsvp1=(%s), rsvp2=(%s), note=(%s) WHERE name1=(%s) OR name2=(%s)',
+                (rsvp1,rsvp2,note,name,name,))
     conn.commit()
     cur.close()
     conn.close()
