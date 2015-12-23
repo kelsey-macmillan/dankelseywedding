@@ -68,15 +68,75 @@
     <div class="row big-space"></div>
     <div class="row big-padding section">
         <h1>RSVP</h1>
-        <form id="rsvpForm">
+        
+        <form id="rsvp-form">
             <p>Please enter the name on your invitation.</p>
             <div class="row">
-                <div class="twelve columns">
-                    <input class="u-full-width" type="text" placeholder="name" id="nameInput">
+                <div class="six columns offset-by-three">
+                    <input class="u-full-width" type="text" placeholder="name" id="name-input">
                 </div>
             </div>
              <input class="button-primary" type="submit" value="Submit">
         </form>
+        
+        <p hidden id="not-on-guest-list"><b>Sorry, we couldn't find you on the guest list.<br>Please enter your name exactly as it appears on your invitation.</b></p>
+        
+        <form hidden id="one-guest-plus-one">
+            <p>We found you on the list! Please let us know if you can be there.</p>
+            <div class="row">
+                <div class="six columns">
+                    <label class="guest-name">My RSVP is...</label>
+                    <select class="u-full-width rsvp1-input">
+                        <option value="no reply">--</option>
+                        <option value="yes">So excited to attend!</option>
+                        <option value="no">Sorry I can't make it.</option>
+                    </select>
+                </div>
+                <div class="six columns">
+                    <label class="plus-one-name">and I will be bringing...</label>
+                    <input class="u-full-width plus-one-input" type="text" placeholder="+ 1 name">
+                </div>
+            </div>
+            <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
+        </form>
+
+        <form hidden id="one-guest">
+            <p>We found you on the list! Please let us know if you can be there.</p>
+            <div class="row">
+                <div class="six columns offset-by-three">
+                    <label class="guest-name">My RSVP is...</label>
+                    <select class="u-full-width rsvp1-input">
+                        <option value="yes">So excited to attend!</option>
+                        <option value="no">Sorry I can't make it.</option>
+                    </select>
+                </div>
+            </div>
+            <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
+        </form>
+
+        <form hidden id="couple-guest">
+            <p>We found you on the list! Please let us know if you can be there.</p>
+            <div class="row">
+                <div class="six columns">
+                    <label class="guest1-name">'s RSVP is...</label>
+                    <select class="u-full-width rsvp1-input">
+                        <option value="yes">So excited to attend!</option>
+                        <option value="no">Sorry I can't make it.</option>
+                    </select>
+                </div>
+                <div class="six columns">
+                    <label class="guest2-name">'s RSVP is...</label>
+                    <select class="u-full-width rsvp2-input">
+                        <option value="yes">So excited to attend!</option>
+                        <option value="no">Sorry I can't make it.</option>
+                    </select>
+                </div>
+            </div>
+            <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
+        </form>
+        
+        <p hidden id="rsvp-submit-error">Looks like something went wrong.<br>Please try submitting your RSVP again.</p>
+
     </div>
 </div>
 
