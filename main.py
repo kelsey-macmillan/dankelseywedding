@@ -1,9 +1,12 @@
 import os
 import psycopg2
 import json
+import urlparse
 from flask import Flask, request, abort
 
 app = Flask(__name__, static_folder='static')
+urlparse.uses_netloc.append("postgres")
+url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
 # Serves Static HTML
 @app.route('/')
@@ -13,8 +16,12 @@ def main():
 # Find Guest and Return Guest Status
 @app.route('/rsvp-get/<name>')
 def rsvp_get(name):
-    
-    conn = psycopg2.connect("dbname=Kelsey user=Kelsey")
+    conn = psycopg2.connect(
+        database=url.path[1:],
+        user=url.username,
+        password=url.password,
+        host=url.hostname,
+        port=url.port)
     cur = conn.cursor()
 
     guest = get_guest(cur,name)
@@ -33,7 +40,12 @@ def rsvp_set(name):
     plus1_name = request.form.get('plus1_name')
     note = request.form.get('note')
 
-    conn = psycopg2.connect("dbname=Kelsey user=Kelsey")
+    conn = psycopg2.connect(
+        database=url.path[1:],
+        user=url.username,
+        password=url.password,
+        host=url.hostname,
+        port=url.port)
     cur = conn.cursor()
     
     guest = get_guest(cur,name)
