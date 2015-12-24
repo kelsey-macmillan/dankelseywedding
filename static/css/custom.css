@@ -167,31 +167,6 @@ body, html, main {
     }
 }
 
-#logistics {
-    display: table;
-}
-
-#logistics-header {
-    text-align: center;
-    padding-left: 10em;
-    padding-right: 10em;
-    position: relative;
-    vertical-align: middle;
-    display: table-cell;
-    background-color: rgba(241,234,229,0.7);
-}
-
-
-#logistics a {
-    color: rgb(100,100,100);
-    font-weight: 200;
-    text-decoration: none;
-}
-
-#logistics a:hover {
-    color: rgb(80,80,80);
-}
-
 #hotel-note {
     color: rgb(100,100,100);
 }
