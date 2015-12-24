@@ -4,13 +4,17 @@
 - Nav Bar
 - Fixed and Scrolling Background
 - Intro
+- Select Box
+- Logistics
+- Registry Link
 - Section
 - Spaces
 - Padding
+- Anchors
 */
 
 
-/* Fixed and Scrolling Background
+/* Nav Bar
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #navbar {
     position: fixed;
@@ -128,9 +132,37 @@ body, html, main {
     max-width: 1170px;
 }
 
+/* Select Box
+ –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.flat-select{
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>");
+    background-repeat:no-repeat;
+    background-position: right 10px top 10px;
+    background-size: 16px 16px;
+    -webkit-appearance: none;
+    -webkit-transition:0.3s ease all;
+    -moz-transition:0.3s ease all;
+    -ms-transition:0.3s ease all;
+    -o-transition:0.3s ease all;
+    transition:0.3s ease all;
+}
 
 /* Logistics
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+    .vcenter-parent {
+        display: table;
+    }
+    .vcenter-child {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+        padding-right: 5%;
+    }
+}
+
 #logistics-header {
     text-align: center;
     padding-left: 10em;
@@ -159,6 +191,61 @@ body, html, main {
 
 #logistics a:hover {
     color: rgb(50,50,50);
+}
+
+#hotel-note {
+    color: rgb(96,96,96);
+}
+
+/* Explore
+ –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.explore a {
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.explore a:hover {
+    color: rgb(96,96,96);
+}
+
+.explore-img {
+    margin-left: 3%;
+    margin-right: 3%;
+    background-repeat: no-repeat;
+    background-position: left; 
+    background-size: auto 100% ;
+    height: 300px;
+}
+
+#julia-pfeiffer {
+    background-image: url("../images/JuliaPfeiffer.jpg");
+    background-position: left; 
+}
+
+#carmel {
+    background-image: url("../images/carmel.jpg");
+    background-position: center; 
+}
+
+#bixby {
+    background-image: url("../images/bixby.jpg");
+    background-position: center; 
+}
+
+#santalucia {
+    background-image: url("../images/santalucia.jpg");
+    background-position: center; 
+}
+
+.explore-top-padding {
+        padding: 50px 0px 0px 0px;
+    }
+
+@media (min-width: 550px){
+    .explore-top-padding {
+        padding: 0px 0px 0px 0px;
+    }
 }
 
 /* Registry Link
