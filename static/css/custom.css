@@ -16,13 +16,16 @@
 
 /* Nav Bar
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-#navbar {
+@media (min-width: 550px){
+    #navbar {
+    display: block;
     position: fixed;
     background: rgba(245,245,245,0.9);
     width: 100%;
     z-index: 1000;
     height: 39px;
     text-align: center;
+    }
 }
 
 #nav {
