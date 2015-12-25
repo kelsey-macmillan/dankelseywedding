@@ -151,7 +151,7 @@ body, html, main {
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #big-day-bg {
     background-color: rgb(230,230,230) ;
-    padding: 3%;
+    padding: 2.5%;
 }
 
 #big-day-cont {
@@ -159,13 +159,19 @@ body, html, main {
     width: 100%;
 }
 
+#big-day-cont img{
+    width: 100%;
+    max-width: 350px;
+}
+
+
 .white {
     background-color: white;
     border-radius: 5px;
 }
 
 .white-padding {
-    padding: 10%;
+    padding: 2% 4% 4% 4%;
 }
 
 
@@ -173,12 +179,13 @@ body, html, main {
 @media (min-width: 550px) {
     .vcenter-parent {
         display: table;
+        margin: auto;
     }
     .vcenter-child {
         display: table-cell;
         vertical-align: middle;
         float: none;
-        padding-right: 5%;
+        text-align: center;
     }
 }
 
