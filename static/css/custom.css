@@ -100,11 +100,7 @@ body, html, main {
 }
 
 .cd-fixed-bg.cd-bg-1 {
-    background-image: url("../images/BigSur2.JPG");
-}
-
-.cd-fixed-bg.cd-bg-3 {
-    background-image: url("../images/flowersfull.JPG");
+    background-image: url("../images/BigSur2.jpg");
 }
 
 .cd-scrolling-bg {
@@ -120,7 +116,7 @@ body, html, main {
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #intro {
     text-align: center;
-    text-shadow:0 0 5px black;
+    text-shadow:0 1px 0 black;
     color: white;
     position: absolute;
     left: 50%;
@@ -154,8 +150,8 @@ body, html, main {
 /* Logistics
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #big-day-bg {
-    background-color: rgb(222,229,220) ;
-    padding: 10%;
+    background-color: rgb(230,230,230) ;
+    padding: 3%;
 }
 
 #big-day-cont {
@@ -165,11 +161,11 @@ body, html, main {
 
 .white {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .white-padding {
-    padding: 4%;
+    padding: 10%;
 }
 
 
