@@ -88,12 +88,14 @@ body, html, main {
 
 .cd-fixed-bg {
     min-height: 100%;
-    background-size: 100%;
-    width: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .cd-fixed-bg.cd-bg-2 {
