@@ -95,11 +95,18 @@ body, html, main {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 
-@media (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .cd-fixed-bg{
-        background-attachment: fixed;
+        background-attachment: scroll;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) { 
+        .cd-fixed-bg{
+        background-attachment: scroll;
     }
 }
 
@@ -128,7 +135,7 @@ body, html, main {
     color: white;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     bottom: auto;
     right: auto;
     -webkit-transform: translateX(-50%) translateY(-60%);
