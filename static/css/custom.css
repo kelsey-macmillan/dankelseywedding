@@ -98,12 +98,14 @@ body, html, main {
     background-attachment: fixed;
 }
 
+/* Mobile and low res tablets*/
 @media only screen and (max-width: 768px) {
     .cd-fixed-bg{
         background-attachment: scroll;
     }
 }
 
+/* Hi Res iPad*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) { 
         .cd-fixed-bg{
         background-attachment: scroll;
@@ -189,19 +191,13 @@ body, html, main {
     padding: 2% 4% 4% 4%;
 }
 
-
-/* For devices larger than 550px */
-@media (min-width: 550px) {
-    .vcenter-parent {
-        display: table;
-        margin: auto;
-    }
-    .vcenter-child {
-        display: table-cell;
-        vertical-align: middle;
-        float: none;
-        text-align: center;
-    }
+.overlay {
+   background:transparent; 
+   position:relative; 
+   width:660px;
+   height:450px; /* your iframe height */
+   top:450px;  /* your iframe height */
+   margin-top:-450px;  /* your iframe height */
 }
 
 #hotel-note {
@@ -301,6 +297,21 @@ body, html, main {
     padding: 20px 0px 20px 0px;
 }
 
+/* Vertical Centering
+ –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+    .vcenter-parent {
+        display: table;
+        margin: auto;
+    }
+    .vcenter-child {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+        text-align: center;
+    }
+}
 
 /* Anchors
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
