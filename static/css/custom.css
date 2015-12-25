@@ -99,6 +99,12 @@ body, html, main {
 
 }
 
+@media (min-width: 750px) {
+    .cd-fixed-bg{
+        background-attachment: fixed;
+    }
+}
+
 .cd-fixed-bg.cd-bg-2 {
     background-image: url("../images/registryWC.JPG");
 }
@@ -124,7 +130,7 @@ body, html, main {
     color: white;
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 50%;
     bottom: auto;
     right: auto;
     -webkit-transform: translateX(-50%) translateY(-60%);
