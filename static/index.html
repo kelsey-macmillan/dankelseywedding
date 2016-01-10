@@ -66,77 +66,81 @@
     <div class="row big-space"></div>
     <div class="row big-padding section">
         <h1>RSVP</h1>
-        
-        <form id="rsvp-form">
-            <p>Please enter the name on your invitation.</p>
-            <div class="row">
-                <div class="six columns offset-by-three">
-                    <input class="u-full-width" type="text" placeholder="name" id="name-input">
-                </div>
-            </div>
-             <input class="button-primary" type="submit" value="Submit">
-        </form>
-        
-        <p hidden id="not-on-guest-list"><b>Sorry, we couldn't find you on the guest list.<br>Please enter your name exactly as it appears on your invitation.</b></p>
-        
-        <form hidden id="one-guest-plus-one">
-            <p>We found you on the list! Please let us know if you can be there.</p>
-            <div class="row">
-                <div class="six columns">
-                    <label class="guest-name">My RSVP is...</label>
-                    <select class="u-full-width rsvp1-input flat-select">
-                        <option value="yes">So excited to attend!</option>
-                        <option value="no">Sorry I can't make it.</option>
-                    </select>
-                </div>
-                <div class="six columns">
-                    <label class="plus-one-name">and I will be bringing...</label>
-                    <input class="u-full-width plus-one-input" type="text" placeholder="+ 1 name">
-                </div>
-            </div>
-            <textarea class="u-full-width note-input" placeholder="Leave us a note!"></textarea>
-            <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
-        </form>
 
-        <form hidden id="one-guest">
-            <p>We found you on the list! Please let us know if you can be there.</p>
-            <div class="row">
-                <div class="six columns offset-by-three">
-                    <label class="guest-name">My RSVP is...</label>
-                    <select class="u-full-width rsvp1-input flat-select">
-                        <option value="yes">So excited to attend!</option>
-                        <option value="no">Sorry I can't make it.</option>
-                    </select>
+        <div class="six columns offset-by-three">
+            <p>We're not ready for RSVPs just yet!<br/>Please come back when you receive your invitation.</p>
+        </div>
+        <div hidden>
+            <form id="rsvp-form">
+                <p>Please enter the name on your invitation.</p>
+                <div class="row">
+                    <div class="six columns offset-by-three">
+                        <input class="u-full-width" type="text" placeholder="name" id="name-input">
+                    </div>
                 </div>
-            </div>
-            <textarea class="u-full-width note-input" placeholder="Leave us a note!"></textarea>
-            <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
-        </form>
+                 <input class="button-primary" type="submit" value="Submit">
+            </form>
+            
+            <p hidden id="not-on-guest-list"><b>Sorry, we couldn't find you on the guest list.<br>Please enter your name exactly as it appears on your invitation.</b></p>
+            
+            <form hidden id="one-guest-plus-one">
+                <p>We found you on the list! Please let us know if you can be there.</p>
+                <div class="row">
+                    <div class="six columns">
+                        <label class="guest-name">My RSVP is...</label>
+                        <select class="u-full-width rsvp1-input flat-select">
+                            <option value="yes">So excited to attend!</option>
+                            <option value="no">Sorry I can't make it.</option>
+                        </select>
+                    </div>
+                    <div class="six columns">
+                        <label class="plus-one-name">and I will be bringing...</label>
+                        <input class="u-full-width plus-one-input" type="text" placeholder="+ 1 name">
+                    </div>
+                </div>
+                <textarea class="u-full-width note-input" placeholder="Leave us a note!"></textarea>
+                <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
+            </form>
 
-        <form hidden id="couple-guest">
-            <p>We found you on the list! Please let us know if you can be there.</p>
-            <div class="row">
-                <div class="six columns">
-                    <label class="guest1-name">'s RSVP is...</label>
-                    <select class="u-full-width rsvp1-input flat-select">
-                        <option value="yes">So excited to attend!</option>
-                        <option value="no">Sorry I can't make it.</option>
-                    </select>
+            <form hidden id="one-guest">
+                <p>We found you on the list! Please let us know if you can be there.</p>
+                <div class="row">
+                    <div class="six columns offset-by-three">
+                        <label class="guest-name">My RSVP is...</label>
+                        <select class="u-full-width rsvp1-input flat-select">
+                            <option value="yes">So excited to attend!</option>
+                            <option value="no">Sorry I can't make it.</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="six columns">
-                    <label class="guest2-name">'s RSVP is...</label>
-                    <select class="u-full-width rsvp2-input flat-select">
-                        <option value="yes">So excited to attend!</option>
-                        <option value="no">Sorry I can't make it.</option>
-                    </select>
-                </div>
-            </div>
-            <textarea class="u-full-width note-input" placeholder="Leave us a note!"></textarea>
-            <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
-        </form>
-        
-        <p hidden id="rsvp-submit-error">Looks like something went wrong.<br>Please try submitting your RSVP again.</p>
+                <textarea class="u-full-width note-input" placeholder="Leave us a note!"></textarea>
+                <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
+            </form>
 
+            <form hidden id="couple-guest">
+                <p>We found you on the list! Please let us know if you can be there.</p>
+                <div class="row">
+                    <div class="six columns">
+                        <label class="guest1-name">'s RSVP is...</label>
+                        <select class="u-full-width rsvp1-input flat-select">
+                            <option value="yes">So excited to attend!</option>
+                            <option value="no">Sorry I can't make it.</option>
+                        </select>
+                    </div>
+                    <div class="six columns">
+                        <label class="guest2-name">'s RSVP is...</label>
+                        <select class="u-full-width rsvp2-input flat-select">
+                            <option value="yes">So excited to attend!</option>
+                            <option value="no">Sorry I can't make it.</option>
+                        </select>
+                    </div>
+                </div>
+                <textarea class="u-full-width note-input" placeholder="Leave us a note!"></textarea>
+                <input class="button-primary rsvp-button" type="submit" value="Send RSVP">
+            </form>
+            
+            <p hidden id="rsvp-submit-error">Looks like something went wrong.<br>Please try submitting your RSVP again.</p>
+        </div>
     </div>
 </div>
 
@@ -165,9 +169,10 @@
             <div class="small-padding four columns">
                 <h4>Travel time from nearby airports:</h4>
                 <ul>
-                    <li>SFO: 3.25 hrs</li>
-                    <li>OAK: 3.25 hrs</li>
-                    <li>SJC: 2.50 hrs</li>
+                    <li>SFO: 3.25 hours</li>
+                    <li>OAK: 3.25 hours</li>
+                    <li>SJC: 2.50 hours</li>
+                    <li>MRY: 1.25 hours</li>
                 </ul>
             </div>
             <div class="small-padding eight columns">
@@ -203,7 +208,7 @@
     </div>
         <div class="row section small-padding">
         <div class="six columns">
-            <h2>Ventanna Inn</h2>
+            <h2>Ventana Inn</h2>
         </div>
         <div class="six columns">
             <p>Luxury spa resort with the feel of a country get-away. Think deep soaking tubs, huge windows, and stone fireplaces.</p>
