@@ -10,9 +10,9 @@ $(document).ready(function() {
         var name = $('#name-input').val()
         $.ajax({
             method: 'GET',
-            url: '/rsvp-get/' + name,
-        // Once query is successfully returned with guest info    
+            url: '/rsvp-get/' + name, 
         }).done(function(guest){
+            // Once query is successfully returned with guest info
             var guest=JSON.parse(guest);
 
             // Determine correct form ID based on guest info
@@ -39,6 +39,10 @@ $(document).ready(function() {
             $('#' + formID + ' .rsvp1-input').val(guest.rsvp1)
             $('#' + formID + ' .rsvp2-input').val(guest.rsvp2)
             $('#' + formID + ' .note-input').val(guest.note)
+            // make submit button say "Update RSVP" if they've already submitted once
+            if (guest.rsvp1 != null)
+                $(".rsvp-button").val("Update RSVP");
+            // show the form
             $('#' + formID).show()    
         }).fail(function(){
             // Give error if guest not on list
@@ -66,7 +70,7 @@ $(document).ready(function() {
                 'note': note
             }
         }).done(function(){
-            $(".rsvp-button").prop('value', 'RSVP Sent!');
+            $(".rsvp-button").prop('value', 'RSVP Sent! Update RSVP');
         }).fail(function(){
             $('#rsvp-submit-error').show()
         })
