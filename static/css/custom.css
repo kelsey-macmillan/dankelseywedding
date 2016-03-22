@@ -190,15 +190,14 @@ body, html, main {
     padding: 2% 4% 4% 4%;
 }
 
-@media(min-width: 550px){
-    .overlay {
+ .overlay {
    background:transparent; 
    position:relative; 
    height:450px; /* your iframe height */
    top:450px;  /* your iframe height */
    margin-top:-450px;  /* your iframe height */
-    }
 }
+
 
 #hotel-note {
     color: rgb(100,100,100);
