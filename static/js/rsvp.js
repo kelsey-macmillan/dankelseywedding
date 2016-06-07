@@ -39,6 +39,7 @@ $(document).ready(function() {
             $('#' + formID + ' .rsvp1-input').val(guest.rsvp1)
             $('#' + formID + ' .rsvp2-input').val(guest.rsvp2)
             $('#' + formID + ' .note-input').val(guest.note)
+            $('#' + formID + ' .location-input').val(guest.location)
             // make submit button say "Update RSVP" if they've already submitted once
             if (guest.rsvp1 != null)
                 $(".rsvp-button").val("Update RSVP");
@@ -60,6 +61,7 @@ $(document).ready(function() {
         var rsvp2 = $('#' + formID + ' .rsvp2-input').val()
         var plus1_name = $('#' + formID + ' .plus-one-input').val()
         var note = $('#' + formID + ' .note-input').val()
+        var location = $('#' + formID + ' .location-input').val()
         $.ajax({
             method: 'POST',
             url: '/rsvp-set/' + name,
@@ -67,7 +69,8 @@ $(document).ready(function() {
                 'rsvp1': rsvp1,
                 'rsvp2': rsvp2,
                 'plus1_name': plus1_name,
-                'note': note
+                'note': note,
+                'location': location
             }
         }).done(function(){
             $(".rsvp-button").prop('value', 'RSVP Sent! Update RSVP');

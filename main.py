@@ -39,6 +39,7 @@ def rsvp_set(name):
     rsvp2 = request.form.get('rsvp2')
     plus1_name = request.form.get('plus1_name')
     note = request.form.get('note')
+    location = request.form.get('location')
 
     conn = psycopg2.connect(
         database=url.path[1:],
@@ -52,14 +53,14 @@ def rsvp_set(name):
 
     # TO DO ADD NOTE
     if guest['name2'] == None and guest['plus1_allowed']:
-        cur.execute('UPDATE guest SET rsvp1=(%s), plus1_name=(%s), note=(%s) WHERE name1=(%s)',
-                (rsvp1,plus1_name,note,name,))
+        cur.execute('UPDATE guest SET rsvp1=(%s), plus1_name=(%s), note=(%s), location=(%s) WHERE name1=(%s)',
+                (rsvp1,plus1_name,note,location,name,))
     elif guest['name2'] == None and not guest['plus1_allowed']:
-        cur.execute('UPDATE guest SET rsvp1=(%s), note=(%s) WHERE name1=(%s)',
-                (rsvp1,note,name,))  
+        cur.execute('UPDATE guest SET rsvp1=(%s), note=(%s), location=(%s) WHERE name1=(%s)',
+                (rsvp1,note,location,name,))
     else:
-        cur.execute('UPDATE guest SET rsvp1=(%s), rsvp2=(%s), note=(%s) WHERE name1=(%s) OR name2=(%s)',
-                (rsvp1,rsvp2,note,name,name,))
+        cur.execute('UPDATE guest SET rsvp1=(%s), rsvp2=(%s), note=(%s), location=(%s) WHERE name1=(%s) OR name2=(%s)',
+                (rsvp1,rsvp2,note,location,name,name,))
     conn.commit()
     cur.close()
     conn.close()
@@ -76,10 +77,11 @@ def create_guest(guest_cols):
     guest['rsvp1']=guest_cols[4]
     guest['rsvp2']=guest_cols[5]
     guest['note']=guest_cols[6]
+    guest['location']=guest_cols[7]
     return guest
 
 def get_guest(cursor,name):
-    cursor.execute('SELECT name1, name2, plus1_allowed, plus1_name, rsvp1, rsvp2, note ' +
+    cursor.execute('SELECT name1, name2, plus1_allowed, plus1_name, rsvp1, rsvp2, note, location ' +
         'FROM guest WHERE name1 = (%s) OR name2 = (%s)', (name,name,))
     guest_cols=cursor.fetchone()
     # if guest is not on the list
