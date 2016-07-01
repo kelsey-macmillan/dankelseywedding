@@ -10,7 +10,7 @@ $(document).ready(function() {
         var name = $('#name-input').val()
         $.ajax({
             method: 'GET',
-            url: '/rsvp-get/' + name, 
+            url: '/rsvp-get/' + name,
         }).done(function(guest){
             // Once query is successfully returned with guest info
             var guest=JSON.parse(guest);
@@ -44,13 +44,13 @@ $(document).ready(function() {
             if (guest.rsvp1 != null)
                 $(".rsvp-button").val("Update RSVP");
             // show the form
-            $('#' + formID).show()    
+            $('#' + formID).show()
         }).fail(function(){
             // Give error if guest not on list
             $('#not-on-guest-list').show()
         })
     })
-                  
+
     // Post guest RSVP
     var submitCallback = function (event){
         event.preventDefault()
@@ -73,7 +73,7 @@ $(document).ready(function() {
                 'location': location
             }
         }).done(function(){
-            $(".rsvp-button").prop('value', 'RSVP Sent! Update RSVP');
+            $(".rsvp-button").prop('value', 'RSVP Sent!');
         }).fail(function(){
             $('#rsvp-submit-error').show()
         })
