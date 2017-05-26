@@ -6,11 +6,9 @@
 - Intro
 - Select Box
 - Logistics
+- Explore
 - Registry Link
-- Section
-- Spaces
-- Padding
-- Anchors
+- Utils
 */
 
 /* Nav Bar
@@ -277,15 +275,15 @@ body, html, main {
     margin-top: 30px;
 }
 
-/* Sections
+/* Utils
  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+ /* Sections*/
 .section {
     text-align: center;
     padding: 20px 0px 20px 0px;
 }
 
-/* Spaces
- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Spaces */
 .big-space {
     height: 100px;
 }
@@ -294,14 +292,12 @@ body, html, main {
     height: 20px;
 }
 
-/* Padding
- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Padding */
 .big-padding {
     padding: 80px 0px 80px 0px;
 }
 
-/* Vertical Centering
- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Vertical Centering */
 /* For devices larger than 550px */
 @media (min-width: 550px) {
     .vcenter-parent {
@@ -316,8 +312,7 @@ body, html, main {
     }
 }
 
-/* Anchors
- –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Anchors */
 a.anchor {
     display: block;
     position: relative;
