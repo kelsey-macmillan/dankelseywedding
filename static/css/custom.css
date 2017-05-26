@@ -283,6 +283,11 @@ body, html, main {
     padding: 20px 0px 20px 0px;
 }
 
+ /* Nearly Full Width*/
+.u-max-near-full-width {
+  max-width: 90%;
+  box-sizing: border-box; }
+
 /* Spaces */
 .big-space {
     height: 100px;
