@@ -1,8 +1,7 @@
 .idea/
 *.pyc
 
->>>>>>> add files
->>>>>>> add files
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
